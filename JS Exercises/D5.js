@@ -31,7 +31,6 @@ console.log("ES2: ", pets);
 // console.log("ES3: ", pets);
 
 pets.reverse();
-
 console.log("ES3: ", pets);
 
 /* ESERCIZIO 4
