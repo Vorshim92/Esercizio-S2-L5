@@ -27,7 +27,11 @@ console.log("ES2: ", pets);
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
 
-pets.sort((a, b) => -(a - b));
+// pets.sort((a, b) => -(a - b));
+// console.log("ES3: ", pets);
+
+pets.reverse();
+
 console.log("ES3: ", pets);
 
 /* ESERCIZIO 4
@@ -132,7 +136,7 @@ while (numericArray[c] !== 32) {
 const charactersArray = ["g", "n", "u", "z", "d"];
 const numberArray = [];
 
-console.log(charactersArray[0].toLowerCase().charCodeAt(0) - 96); // charCodeAt(0) restituisce il codice Unicode del primo carattere della stringa, e sottraendo 96 otteniamo il numero corrispondente alla lettera nell’alfabeto.
+// .toLowerCase().charCodeAt(0) - 96); // .charCodeAt(0): Restituisce il codice Unicode del primo carattere della stringa. Ogni carattere in JavaScript è rappresentato da un numero intero che rappresenta il suo codice Unicode. "- 96": Sottraendo 96 al codice Unicode ottenuto, si ottiene un numero che rappresenta la posizione della lettera nell'alfabeto. Questo è basato sul fatto che, nel set di caratteri Unicode, i codici Unicode per le lettere minuscole dell'alfabeto inglese ('a' - 'z') iniziano da 97. Quindi, sottraendo 96, otterrai un numero che rappresenta la posizione dell'alfabeto, dove 'a' sarà 1, 'b' sarà 2 e così via.
 
 function NumeroAlfabeto(a) {
   if (typeof a === "string") {
