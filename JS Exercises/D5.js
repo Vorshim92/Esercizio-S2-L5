@@ -130,15 +130,21 @@ while (numericArray[c] !== 32) {
     es. [f, b, e] --> [6, 2, 5]
 */
 const charactersArray = ["g", "n", "u", "z", "d"];
-const numberArray = []
+const numberArray = [];
 
-switch () {
-  case "g":
-    numberArray.push(7)
-    break;
+console.log(charactersArray[0].toLowerCase().charCodeAt(0) - 96); // charCodeAt(0) restituisce il codice Unicode del primo carattere della stringa, e sottraendo 96 otteniamo il numero corrispondente alla lettera nell’alfabeto.
 
-  
-   
+function NumeroAlfabeto(a) {
+  if (typeof a === "string") {
+    return a.toLowerCase().charCodeAt(0) - 96;
+  }
 }
 
-
+for (let i = 0; i < charactersArray.length; i++) {
+  switch (charactersArray[i]) {
+    case charactersArray[i]:
+      numberArray.push(NumeroAlfabeto(charactersArray[i]));
+      break;
+  }
+}
+console.log("ES10: ", numberArray);
