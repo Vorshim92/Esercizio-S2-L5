@@ -146,7 +146,7 @@ function NumeroAlfabeto(a) {                      // scoperto questo fantastico 
 }
 
 
-for (let i = 0; i < charactersArray.length; i++) {         // qui ho pensato di evitare di fare mille "case" dentro lo switch poiché mi sembrava poco pratico creare un "case" per ogni lettera dell'alfabeto
+for (let i = 0; i < charactersArray.length; i++) {         // qui ho pensato di evitare di fare mille "case" dentro lo switch poiché mi sembrava poco pratico creare un "case" per ogni lettera dell'alfabeto, anche perché c'è già una funzione che fa questa cosa!
   switch (charactersArray[i]) {                            //  quindi ho creato uno stratagemma per far sì che qualsiasi array inserito andasse a pushare automaticamente nella funzione la stringa traducendo direttamente nell'array nuovo i numeri. 
     case charactersArray[i]:
       numberArray.push(NumeroAlfabeto(charactersArray[i]));
