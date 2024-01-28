@@ -137,14 +137,17 @@ const numberArray = [];
 
 // .toLowerCase().charCodeAt(0) - 96); // .charCodeAt(0): Restituisce il codice Unicode del primo carattere della stringa. Ogni carattere in JavaScript è rappresentato da un numero intero che rappresenta il suo codice Unicode. "- 96": Sottraendo 96 al codice Unicode ottenuto, si ottiene un numero che rappresenta la posizione della lettera nell'alfabeto. Questo è basato sul fatto che, nel set di caratteri Unicode, i codici Unicode per le lettere minuscole dell'alfabeto inglese ('a' - 'z') iniziano da 97. Quindi, sottraendo 96, otterrai un numero che rappresenta la posizione dell'alfabeto, dove 'a' sarà 1, 'b' sarà 2 e così via.
 
-function NumeroAlfabeto(a) {
+
+
+function NumeroAlfabeto(a) {                      // scoperto questo fantastico metodo per restituire il codice Unicode, utilizziamolo con una funzione per automatizzare il tutto, qualsiasi stringa verrà inserita all'interno della funzione (parametro "a" === string, non accetta altro) verrà automaticamente translata nel corrispettivo numero della posizione nell'alfabeto.
   if (typeof a === "string") {
     return a.toLowerCase().charCodeAt(0) - 96;
   }
 }
 
-for (let i = 0; i < charactersArray.length; i++) {
-  switch (charactersArray[i]) {
+
+for (let i = 0; i < charactersArray.length; i++) {         // qui ho pensato di evitare di fare mille "case" dentro lo switch poiché mi sembrava poco pratico creare un "case" per ogni lettera dell'alfabeto
+  switch (charactersArray[i]) {                            //  quindi ho creato uno stratagemma per far sì che qualsiasi array inserito andasse a pushare automaticamente nella funzione la stringa traducendo direttamente nell'array nuovo i numeri. 
     case charactersArray[i]:
       numberArray.push(NumeroAlfabeto(charactersArray[i]));
       break;
